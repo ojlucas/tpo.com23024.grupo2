@@ -7,3 +7,8 @@
 <li>Javier Perez</li>
 <li>Lucas Ojunian</li>
 </ul>
+
+<strong>Representante del grupo</strong><br>
+<ul>
+<li>Lucas Ojunian</li>
+</ul>
