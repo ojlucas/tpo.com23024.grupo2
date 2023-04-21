@@ -64,6 +64,9 @@ body{
     display: block;
     margin: 10px 14px;    
 }
+.menuitem i{
+       vertical-align: middle;
+}
 
 /*
 MEDIA QUERY
