@@ -10,17 +10,22 @@ body{
     font-family: 'Nunito', sans-serif;
     font-size: 1em;
 }
+html{
+    height: 100%;
+}
 
 .grid-container{   
     display: grid;
     height: 100%;
-    gap:0px;     
+    gap: 0px 0px;   
     border: 0px;
     padding:  0;
+    grid-template-columns: 0.3fr 1.7fr; 
+    grid-template-rows: 0.2fr 2fgir 0.3fr; 
     grid-template-areas: 
     "header header" 
     "areamenu main"     
-    "footer footer";
+    "areamenu footer";
 }
 .header{
     grid-area: header;
