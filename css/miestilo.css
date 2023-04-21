@@ -21,7 +21,7 @@ html{
     border: 0px;
     padding:  0;
     grid-template-columns: 0.3fr 1.7fr; 
-    grid-template-rows: 0.2fr 2fgir 0.3fr; 
+    grid-template-rows: 0.2fr 2fr 0.3fr; 
     grid-template-areas: 
     "header header" 
     "areamenu main"     
