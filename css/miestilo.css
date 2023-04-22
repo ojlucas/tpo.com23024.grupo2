@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    border:1px solid 
+    border:1px solid #ccc;
 }
 body{
     height: 100%;
@@ -19,9 +19,9 @@ html{
     height: 100%;
     gap: 0px 0px;   
     border: 0px;
-    padding:  0;
+    padding:  0;    
     grid-template-columns: 0.3fr 1.7fr; 
-    grid-template-rows: 0.2fr 2fr 0.3fr; 
+    grid-template-rows: 0.2fr 2fr 0.5fr; 
     grid-template-areas: 
     "header header" 
     "areamenu main"     
@@ -39,7 +39,7 @@ html{
 }
 .navbar{
     grid-area: areamenu; 
-    padding: 10px; 
+    padding: 0px; 
     width: 200px;  
 }
 .main{
@@ -48,10 +48,7 @@ html{
     width: calc(100vw - 200px);
     padding: 20px 15px;
 }
-.article{
-    grid-area: article;
-   
-}
+ 
 .footer{
     grid-area:footer;
     min-height: 100px;
@@ -97,12 +94,15 @@ puntos de corte para 4 tamaños de dispositivos distintos
         display: inline-block;
         margin: 10px 14px;    
     }
-    .main{      
-        min-height: 300px;
+    .main{             
+        height: 100%;
+        min-height: 500px;
         width: 100%;
         padding: 20px 15px;
     }
     .grid-container{  
+        grid-template-columns: 1fr; 
+        grid-template-rows: 0.2fr .2fr 2fr .5fr; 
         grid-template-areas: 
         "header header" 
         "areamenu areamenu"     
@@ -119,6 +119,16 @@ puntos de corte para 4 tamaños de dispositivos distintos
     }
     .navbar{
         display: none;   
+    }
+    .grid-container{  
+        grid-template-columns: 1fr; 
+        grid-template-rows: .2fr 0fr 2fr .5fr; 
+        grid-template-areas: 
+        "header header" 
+        "areamenu areamenu"     
+        "main main"     
+        "footer footer";
+        padding: 0px;
     }
 }
 
