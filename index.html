@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-la">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,8 @@
     <title>Inicio</title>
     <link rel="stylesheet" href="css/miestilo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -20,36 +22,45 @@
         <nav class="navbar">
 
             <ul class="menu">
-                <li class="menuitem"><i class='bx bx-chevron-right' ></i> Inicio</li>
-                <li class="menuitem"><i class='bx bx-chevron-right' ></i> Noticias destacadas</li>
-                <li class="menuitem"><i class='bx bx-chevron-right' ></i> Contactanos</li>
-                <li class="menuitem"><i class='bx bx-chevron-right' ></i> Acerca de</li>
-                <li class="menuitem"></li>
-                <li class="menuitem"><i class='bx bx-chevron-right' ></i> Seguinos</li>
-                <li class="menuitem"><i class='bx bx-chevron-right' ></i> &nbsp;&nbsp; Twitter</li>
-                <li class="menuitem"><i class='bx bx-chevron-right' ></i> &nbsp;&nbsp;Instragram</li>
+                <li class="menuitem"><a href="index.html" ><i class='bx bxs-home'></i> Inicio</a></li>
+                <li class="menuitem"><a href="index.html" ><i class='bx bxs-star' ></i> Noticias destacadas</a></li>
+                <li class="menuitem"><a href="index.html" ><i class='bx bxs-contact' ></i> Contactanos</a></li>
+                <li class="menuitem"><a href="index.html" ><i class='bx bxs-info-circle' ></i> Acerca de</a></li>
+               
+             
+                <li class="menuitem"><a href="https://www.Twitter.com" target="_blank" ><i class='bx bxl-twitter' ></i> Twitter</a></li>
+                <li class="menuitem"><a href="https://www.Instragram.com" target="_blank"><i class='bx bxl-instagram-alt' ></i> Instragram</a></li>
             </ul>
 
         </nav>
         <main class="main">
-        <div class="slide">aca va un slide</div>
+        <div class="slide" id="slide"></div>
+        
+        <div class="etiquetas">
+            <div class="unaEtiqueta oculto" id="vertodo" ><a href="javascript:mostrarNotas('');">Ver todo</a></div>
+            <div class="unaEtiqueta">#Cripto</div> 
+        <div class="unaEtiqueta">#html</div> <div class="unaEtiqueta">#Css</div> 
+        <div class="unaEtiqueta" ><a href="javascript:mostrarNotas('python');">#python</a></div></div>
+        <div class="titulo" id="titulo">Novedades</div>
             <section class="centroTitularesNoticias">
-  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota">imagen de la nota<img src=""></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...<br>Leer m&aacute;s</div></div>
-  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota">imagen de la nota<img src=""></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...<br>Leer m&aacute;s</div></div>
-  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota">imagen de la nota<img src=""></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...<br>Leer m&aacute;s</div></div>
-  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota">imagen de la nota<img src=""></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...<br>Leer m&aacute;s</div></div>
-  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota">imagen de la nota<img src=""></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...<br>Leer m&aacute;s</div></div>
-  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota">imagen de la nota<img src=""></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...<br>Leer m&aacute;s</div></div>
-  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota">imagen de la nota<img src=""></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...<br>Leer m&aacute;s</div></div>
-  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota">imagen de la nota<img src=""></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...<br>Leer m&aacute;s</div></div>
-  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota">imagen de la nota<img src=""></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...<br>Leer m&aacute;s</div></div>          
-  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota">imagen de la nota<img src=""></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...<br>Leer m&aacute;s</div></div>
-  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota">imagen de la nota<img src=""></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...<br>Leer m&aacute;s</div></div>
-  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota">imagen de la nota<img src=""></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...<br>Leer m&aacute;s</div></div>      
+  <div class="centroTitularunaNoticia python" ><div class="miniaturaimagenNota"><img src="./imagenes/pexels-luis-gomes-546819.jpg"></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...</div><div class="leermas">Leer m&aacute;s</div></div>
+  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota"><img src="./imagenes/pexels-luis-gomes-546819.jpg"></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...</div><div class="leermas">Leer m&aacute;s</div></div>
+  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota"><img src="./imagenes/pexels-luis-gomes-546819.jpg"></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...</div><div class="leermas">Leer m&aacute;s</div></div>
+  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota"><img src="./imagenes/pexels-luis-gomes-546819.jpg"></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...</div><div class="leermas">Leer m&aacute;s</div></div>
+  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota"><img src="./imagenes/pexels-luis-gomes-546819.jpg"></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...</div><div class="leermas">Leer m&aacute;s</div></div>
+  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota"><img src="./imagenes/pexels-luis-gomes-546819.jpg"></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...</div><div class="leermas">Leer m&aacute;s</div></div>
+  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota"><img src="./imagenes/pexels-luis-gomes-546819.jpg"></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...</div><div class="leermas">Leer m&aacute;s</div></div>
+  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota"><img src="./imagenes/pexels-luis-gomes-546819.jpg"></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...</div><div class="leermas">Leer m&aacute;s</div></div>
+  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota"><img src="./imagenes/pexels-luis-gomes-546819.jpg"></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...</div><div class="leermas">Leer m&aacute;s</div></div>          
+  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota"><img src="./imagenes/pexels-luis-gomes-546819.jpg"></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...</div><div class="leermas">Leer m&aacute;s</div></div>
+  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota"><img src="./imagenes/pexels-luis-gomes-546819.jpg"></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...</div><div class="leermas">Leer m&aacute;s</div></div>
+  <div class="centroTitularunaNoticia"><div class="miniaturaimagenNota"><img src="./imagenes/pexels-luis-gomes-546819.jpg"></div> <div class="tituloNota">Titulo nota</div><div class="resumenNota">Ac&aacute; va un resumen de la nota...</div><div class="leermas">Leer m&aacute;s</div></div>      
 </section>
         </main>        
         <footer class="footer">Esto es el pie de pagina</footer>
     </div>
 </div>
+<script src="js/javascript.js" ></script>
+
 </body>
 </html>

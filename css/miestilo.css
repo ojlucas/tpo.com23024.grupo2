@@ -10,6 +10,14 @@ body{
     font-family: 'Nunito', sans-serif;
     font-size: 1em;
 }
+a{ 
+  text-decoration: none;
+  color: #000;
+}
+.bx {
+
+  color: #8b8888;}
+
 html{
     height: 100%;
 }
@@ -27,7 +35,7 @@ html{
     grid-template-columns: 0.5fr auto;
         grid-template-rows: .1fr 1fr .3fr;
     grid-template-areas:
-        "header header"
+        "areamenu header"
         "areamenu main"
         "areamenu footer";
 }
@@ -39,17 +47,23 @@ html{
     text-transform: uppercase;
     font-size: 1.5em;
     font-weight: bold;
-    color:#383e5c;
+    background: #1f4e7e;
+    color: #fff;
 }
 .navbar{
     grid-area: areamenu; 
     padding: 0px; 
     width: 200px;  
+    background: #fafafa;
+    box-shadow: 3px 0px 10px rgb(0 0 0 / 5%);
+    position: relative;
+    z-index: 100;
 }
 .main{
     grid-area: main;
     min-height: 300px;  
     padding: 0px;
+    background: #f1f1f1;
 }
  
 .footer{
@@ -60,33 +74,99 @@ html{
 }
 .menu{
     list-style: none;
-  
-   
+    position: sticky;
+    top: 110px;
 }
 .menuitem{
     display: block;
-    margin: 10px 14px;    
+    margin: 18px 14px;    
+    
+}
+.menuitem a{
+  color: #8b8888;
 }
 .menuitem i{
        vertical-align: middle;
+
 }
 .slide{
- background-color: #eee;
+ background-color: #fff;
  height:250px;
- margin-bottom:20px;
+ background: url(../imagenes/pexels-roberto-nickson-3082341.jpg) no-repeat #cccccc;
+    background-position-y: -200px;
+    background-size: cover;
+ 
+}
+.etiquetas{
+    display: flex;
+    gap: 25px;    
+    margin: 25px 0px 0px 40px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+   
+}
+.unaEtiqueta{
+display:inline-block;
+padding: 8px 15px;
+border-radius: 5px;
+background: #d5d3d3;
+}
+.unaEtiqueta a{
+  color: #fff;
+}
+.oculto{
+  display: none;
+}
+#vertodo{
+  background: #6ccb8e;
+
+}
+.fondoAzul{
+  background: #3559a9;
+}
+.fondoGris{
+  background: #c9c9c9;
+}
+.titulo{
+  text-transform: uppercase;
+  display: block;
+  font-weight: 300;
+  font-size: 1.5em;
+  margin: 20px 0px 0px 40px;
 }
 .centroTitularesNoticias {
   display: flex;
   gap: 25px;
-  margin:20px;
+  margin: 15px 35px;
   flex-wrap: wrap;
   align-items: flex-start;
+
 }
+.centroTitularesNoticias div:nth-child(1) { animation-delay: .1s }
+.centroTitularesNoticias div:nth-child(2) { animation-delay: .2s }
+.centroTitularesNoticias div:nth-child(3) { animation-delay: .3s }
+.centroTitularesNoticias div:nth-child(4) { animation-delay: .4s }
+.centroTitularesNoticias div:nth-child(5) { animation-delay: .5s }
+.centroTitularesNoticias div:nth-child(6) { animation-delay: .6s }
+.centroTitularesNoticias div:nth-child(7) { animation-delay: .7s }
+.centroTitularesNoticias div:nth-child(8) { animation-delay: .8s }
+.centroTitularesNoticias div:nth-child(9) { animation-delay: .9s }
+.centroTitularesNoticias div:nth-child(10) { animation-delay: 1s }
+.centroTitularesNoticias div:nth-child(11) { animation-delay: 1.1s }
+.centroTitularesNoticias div:nth-child(12) { animation-delay: 1.2s }
 
 .centroTitularunaNoticia{
 width:250px;
 height:250px;
-
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background: #fff;
+    overflow: hidden;
+    padding: 10px;
+    margin: 5px 0 8px 0;
+   position: relative;
+   animation: FadeIn .5s linear;
+   animation-fill-mode: both;
 }
 
 .miniaturaimagenNota{ 
@@ -96,14 +176,42 @@ height:100px;
 border:1px solid #eee;
 border-radius: 5px;
 margin-bottom:5px;
+overflow: hidden;
 }
 .tituloNota{
 text-transform:uppercase;
 }
-
+.leermas {
+  font-size: .8em;
+  color: #7c7777;
+  font-weight: bold;
+  position: absolute;
+  top: 220px;
+  left: -18px;
+  width: 100%;
+  text-align: right;
+}
 /*
 ANIMACIONES de animista
 */
+@keyframes FadeIn { 
+  0% {
+    opacity: 0;
+    transform: scale(.1);
+  }
+
+  85% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.slide-top {
+	-webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 .slide-in-top {
 	-webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -112,6 +220,27 @@ ANIMACIONES de animista
 	-webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+
 @-webkit-keyframes slide-in-top {
     0% {
       -webkit-transform: translateY(-1000px);
