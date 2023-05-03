@@ -165,8 +165,7 @@ height:250px;
     padding: 10px;
     margin: 5px 0 8px 0;
    position: relative;
-   animation: FadeIn .5s linear;
-   animation-fill-mode: both;
+  
 }
 
 .miniaturaimagenNota{ 
@@ -194,6 +193,10 @@ text-transform:uppercase;
 /*
 ANIMACIONES de animista
 */
+.aparecer{
+  animation: FadeIn .5s linear;
+  animation-fill-mode: both;
+}
 @keyframes FadeIn { 
   0% {
     opacity: 0;
