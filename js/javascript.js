@@ -8,7 +8,7 @@ function asignarvisibilidadClase(valor, clase){
     for (let i = 0; i < coleccion.length; i++) {
        coleccion[i].classList.remove("slide-in-left");
        coleccion[i].offsetWidth;
-       coleccion[i].style.visibility=valor;     
+       coleccion[i].style.display=valor;     
        coleccion[i].classList.add("slide-in-left"); 
     } 
 }
@@ -16,12 +16,12 @@ function asignarvisibilidadClase(valor, clase){
 function mostrarNotas(laclase){
 	console.log('mostrarNotas ' + laclase);
     if (laclase.length == 0){        
-        asignarvisibilidadClase('visible', 'centroTitularunaNoticia');  
+        asignarvisibilidadClase('none', 'centroTitularunaNoticia');  
         document.getElementById('vertodo').style.display='none';
         document.getElementById('titulo').innerHTML='Novedades';   
 	}else{
-        asignarvisibilidadClase( 'hidden', 'centroTitularunaNoticia');
-	    asignarvisibilidadClase('visible', laclase);  
+        asignarvisibilidadClase( 'none', 'centroTitularunaNoticia');
+	    asignarvisibilidadClase('block', laclase);  
         document.getElementById('vertodo').style.display='block';
         document.getElementById('titulo').innerHTML=laclase;       
 	}
