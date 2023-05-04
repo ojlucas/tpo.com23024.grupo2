@@ -50,6 +50,9 @@ html{
     background: #1f4e7e;
     color: #fff;
 }
+.header img{
+vertical-align :text-bottom;
+}
 .navbar{
     grid-area: areamenu; 
     padding: 0px; 
@@ -172,12 +175,17 @@ height:250px;
 .miniaturaimagenNota{ 
 width:100%;
  background-color: #eee;
-height:100px;
+height:150px;
 border:1px solid #eee;
 border-radius: 5px;
-margin-bottom:5px;
+margin-bottom:10px;
 overflow: hidden;
 }
+.miniaturaimagenNota img{
+object-fit: cover;
+    width: 230px;
+    height: 150px;
+  }
 .tituloNota{
 text-transform:uppercase;
 }
