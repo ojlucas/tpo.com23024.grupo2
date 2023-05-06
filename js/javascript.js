@@ -74,3 +74,12 @@ setInterval(() => {
   }, 4500);
 
   cambiarslide(x);
+
+  function mostrarmenu(){
+
+    estado = document.getElementById('menu').style.display;
+    console.log('estado ' + estado);
+    if (estado == 'block') document.getElementById('menu').style.display='none';
+    else  document.getElementById('menu').style.display='block';
+   
+   }

@@ -79,7 +79,18 @@ vertical-align :text-bottom;
     padding: 20px 15px;
     background-color: #eeeeee;
     text-align: center;
-    
+    background-color: #5285b9;
+    color: #fff;
+}
+.footer a{
+  color: #fff;
+}
+.colorblanco{
+  color: #fff !important;
+} 
+.copy{
+  padding: 20px;
+  word-break: break-word;
 }
 .menu{
     list-style: none;
@@ -378,6 +389,9 @@ puntos de corte para 4 tamaños de dispositivos distintos
   pc : más de  992px
 
 */
+.menumobile{
+  display: none;
+}
 @media(max-width:1400px){
 .centroTitularunaNoticia {
   width: 250px;
@@ -406,6 +420,7 @@ puntos de corte para 4 tamaños de dispositivos distintos
 .menu{
   text-align: center;
   height: 50px;
+  display: block; 
 }
 .menuitem{
   display: inline-block;
@@ -449,13 +464,33 @@ puntos de corte para 4 tamaños de dispositivos distintos
     }
 }
 @media(max-width:768px){
-
+  .menumobile{
+    display: block;
+    height: 50px;
+    
+    padding: 12px;
+    text-align: center;
+  }
+  .menumobile img{
+    vertical-align: text-bottom;
+  }
+  .menuitem {
+    display: block;
+    margin: 30px 14px;
+  }
+ 
     .header{
        
         color:#fff;
     }
     .navbar{
-        display: none;   
+        display: block;   
+    }
+    .menu{
+      display: none; 
+      margin: 10px;
+      height: auto;
+        text-align: left;
     }
     .slide{
       height: 340px;
@@ -475,9 +510,10 @@ puntos de corte para 4 tamaños de dispositivos distintos
         "footer footer";
         padding: 0px;
     }
-    .etiquetas {
+    .etiquetas {    
+      gap: 15px;
       margin: 25px 0px 0px 0px;
-      justify-content: space-between;
+      justify-content: flex-start;
     }
     .titulo {
 
@@ -505,6 +541,10 @@ puntos de corte para 4 tamaños de dispositivos distintos
 }
 
 @media(max-width:476px){
+  .copy{
+    padding: 5px;
+    word-break: break-word;
+  }
 
     .header{
         font-size: 1.1em;
@@ -517,9 +557,7 @@ puntos de corte para 4 tamaños de dispositivos distintos
     .header img{
       height: 25px;
     }
-    .navbar{
-        display: none;   
-    }
+   
     .miniaturaimagenNota {
       height: 150px;
     }
