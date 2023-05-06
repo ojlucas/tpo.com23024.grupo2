@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Expo Tecno</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/styleOne.css" rel="stylesheet">   
+    </head>
+    <body>
+    <header>
+        <h1>Expo Tecno</h1>
+    </header>
+    <main>
+        
+        <form id="myForm">
+            <div><label>Nombre</label></div>
+            <div><input type="text" id="nombre" placeholder="Nombre"></div>
+            <div><label>Apellido</label> </div>
+            <div><input type="text" id="apellido" placeholder="Apellido"></div>
+            <div><label>Email</label> </div>
+            <div><input type="email" id="correo" placeholder="Email" ></div>
+            <div><label>Cantidad de entradas</label> </div>
+            <div><input type="text" id="cant" placeholder="0"></div> 
+            <div><label>Categoría</label> </div>
+            <div>
+            <select id="categoriaTicket">
+                    <option selected value="0">Entrada general - $1000</option>
+                    <option value="1">Corporativo - 10% de descuento*</option>
+                    <option value="2">Estudiante - 75% de descuento*</option>
+                    
+                </select>
+                <p>*se deberá presentar la correspondiente documentación en la entrada</p>
+            </div>
+            
+            <div id="totalAPagarBox">
+            Total a Pagar: $ 
+            </div>
+            
+            <div><button type="button" id="btnBorrar">Borrar</button>
+        <button type="button" id="btnResumen">Resumen</button></div>
+            <div><label>¿Cuál de las actividades de la Expo Tecno es la que más te interesa?</label></div>
+            <textarea></textarea>
+            <div><button type="button" id="btmContinuar">Continuar compra</button></div>
+        
+        </form>  
+    </main>
+    <script src="js/venta.js"></script> 
+    </body>
+</html>

@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body, button, select, input, textarea{
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+}
+
+main{
+    width: 40%;
+}
+
+
+label{
+    font-weight: bold;
+}
+div, textarea, button{
+    margin-top: 9px;
+}
+
+textarea{
+    height:200px;
+    width: 100%;
+    font-size: 1em;
+}
+
+input, select{
+    height:30px;
+    width: 100%;
+    font-size: 1em;
+}
+
+#totalAPagarBox{
+    font-size: 1.15em;
+    border-style:ridge;
+    text-align: center;  
+}
+
+button {
+    height: 30px;
+    width:49.6%;
+    border: none;
+    border-radius: 3px;
+    font-size: 1em;
+    padding:0;
+}
+
+#btnBorrar{
+    background-color: #E04641;
+}
+
+#btnResumen{
+    background-color: #70BA33;
+}
+
+#btmContinuar{
+    background-color: #2783B9;
+    width: 100%;
+}
+
