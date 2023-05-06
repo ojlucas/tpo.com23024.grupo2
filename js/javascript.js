@@ -44,8 +44,10 @@ function cambiarslide(x){
     document.getElementById('slide').offsetWidth;
     document.getElementById('slide').classList.add("slide-in-top"); 
     document.getElementById('slide').style.background="url(" + elslide.destacadas[x].imagen + ") no-repeat";      
-    document.getElementById('slide').style.backgroundSize="cover";      
-    document.getElementById('slide').style.backgroundPositionY="-200px";      
+    document.getElementById('slide').style.backgroundSize="cover";   
+    if (screen.width>900){
+        document.getElementById('slide').style.backgroundPositionY="-200px"; 
+    }     
     document.getElementById('slide').onclick = function(){ window.location=elslide.destacadas[x].link; } ; 
     document.getElementById('tituloslide').innerHTML="<a href='"+ elslide.destacadas[x].link  + "'>" + elslide.destacadas[x].titulo + "</a>";      
     document.getElementById('tituloslide').classList.remove("slide-in-left");

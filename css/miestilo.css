@@ -75,9 +75,11 @@ vertical-align :text-bottom;
  
 .footer{
     grid-area:footer;
-    min-height: 100px;
+    min-height: 200px;
     padding: 20px 15px;
     background-color: #eeeeee;
+    text-align: center;
+    
 }
 .menu{
     list-style: none;
@@ -110,6 +112,7 @@ vertical-align :text-bottom;
     background-size: cover;
  position: relative;
  cursor: pointer;
+ overflow: hidden;
 }
 .tituloslide{
   position: absolute;
@@ -375,6 +378,40 @@ puntos de corte para 4 tamaños de dispositivos distintos
   pc : más de  992px
 
 */
+@media(max-width:1400px){
+.centroTitularunaNoticia {
+  width: 250px;
+}
+.miniaturaimagenNota {
+  height: 150px;
+}
+.miniaturaimagenNota img {
+  width: 250px;
+  height: 150px;
+}
+.grid-container{  
+  grid-template-columns: 1fr; 
+  grid-template-rows: 0.2fr .2fr 2fr .5fr; 
+  grid-template-areas: 
+  "header header" 
+  "areamenu areamenu"     
+  "main main"     
+  "footer footer";
+  padding: 0px;
+}
+.navbar{
+  display: block;   
+  width: 100%;  
+}
+.menu{
+  text-align: center;
+  height: 50px;
+}
+.menuitem{
+  display: inline-block;
+  margin: 15px 14px; 
+}
+}
 @media(max-width:992px){
 
     .contenedor {
@@ -419,6 +456,14 @@ puntos de corte para 4 tamaños de dispositivos distintos
     }
     .navbar{
         display: none;   
+    }
+    .slide{
+      height: 340px;
+    }
+    .tituloslide {
+      position: absolute;
+      top: 150px;
+    
     }
     .grid-container{  
         grid-template-columns: 1fr; 
