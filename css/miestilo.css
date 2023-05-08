@@ -225,7 +225,31 @@ background: #86c79794;
    position: relative;
    
 }
-
+.centroNoticiasInternacionales{
+  min-height: 500px;
+  margin: 15px 45px;
+}
+.centroAcercade{
+  margin: 15px 45px;
+}
+.centroAcercade li{
+  list-style: none;
+}
+.centroContacto{
+  margin: 15px 45px;
+}
+.mapa{
+  width: 100% !important;
+  border:0;
+}
+.subtitulo{
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 25px 0px;
+}
+.espacioentrelineas{
+  margin: 15px 0;
+}
 .miniaturaimagenNota{ 
 width:100%;
  background-color: #eee;
@@ -263,6 +287,42 @@ height: 200px;
   width: 100%;
   text-align: right;
   
+}
+/*https://loading.io/css/*/
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 /*
 ANIMACIONES de animista
@@ -464,6 +524,12 @@ puntos de corte para 4 tamaños de dispositivos distintos
     }
 }
 @media(max-width:768px){
+  .centroAcercade{
+    margin: 15px 15px;
+  }
+  .centroContacto{
+    margin: 15px 15px;
+  }
   .menumobile{
     display: block;
     height: 50px;
