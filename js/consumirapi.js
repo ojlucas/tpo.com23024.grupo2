@@ -2,6 +2,7 @@
  /*
  API PARA NOTICIAS
  https://github.com/cyberboysumanjay/Inshorts-News-API 
+ https://inshorts.deta.dev/news?category=technology
  title
  content
  imageUrl
@@ -11,7 +12,7 @@
 
  const LeerApi = async () => {
   try{
-    const res = await fetch("https://inshorts.deta.dev/news?category=technology");
+    const res = await fetch("https://ojlucas.github.io/tpo.com23024.grupo2/news.json");
     const datos = await res.json();
     console.log( ' respuesta noticias ');
     return datos;
