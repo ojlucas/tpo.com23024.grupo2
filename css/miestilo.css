@@ -288,6 +288,12 @@ height: 200px;
   text-align: right;
   
 }
+.leermas a{
+  color: #6c9577;
+}
+.leermas a:hover{
+  color: #374b3c;
+}
 /*https://loading.io/css/*/
 .lds-ring {
   display: inline-block;
