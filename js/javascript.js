@@ -61,19 +61,6 @@ function cambiarslide(x){
     //console.log('imagen ' + elslide.destacadas[x].imagen);   
 }
  
-  var datosslide = '{ "destacadas" : [' +
-'{ "imagen":"./imagenes/fotoslide1.jpg" , "titulo":"La Universidad de la Plata conquistar&aacute; el espacio con su propio nanosat&eacute;lite", "link": "nota1.html" },' +
-'{ "imagen":"./imagenes/fotoslide2.jpg" , "titulo":"ESTA HERRAMIENTA ARGENTINA CONVIERTE TRANSCRIBE LOS AUDIOS EN TEXTO", "link": "nota2.html" },' +
-'{ "imagen":"./imagenes/fotoslide3.jpg" , "titulo":"¡Por fin! WhatsApp es ahora multidispositivo", "link": "nota3.html" } ]}';
-  const elslide = JSON.parse(datosslide);
-  var x=0;
-setInterval(() => {   
-    x++;
-    if (x>=elslide.destacadas.length) x = 0;
-    cambiarslide(x);  
-  }, 4500);
-
-  
 
   function mostrarmenu(){
     estado = document.getElementById('menu').style.display;
