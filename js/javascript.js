@@ -20,6 +20,10 @@ function displayClase(valor, clase){
 
 function mostrarNotas(laclase){
 	console.log('mostrarNotas ' + laclase);
+    
+    var etiquetas = document.getElementById("etiquetas");
+    etiquetas.scrollIntoView();
+      
     if (laclase.length == 0){        
         displayClase('block', 'centroTitularunaNoticia'); 
         displayClase('block', 'titulo'); 
