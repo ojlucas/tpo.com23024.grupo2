@@ -180,6 +180,22 @@ background: #86c79794;
   font-size: 1.5em;
   margin: 20px 0px 0px 40px;
 }
+.titulounaNota{
+  text-transform: uppercase;
+  display: block;
+  font-weight: bold;
+  font-size: 1.5em;
+
+}
+.tituloRegistro{
+  text-transform: uppercase;
+  display: block;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+
+}
+
 .centroTitularesNoticias {
   display: flex;
   gap: 20px;
@@ -227,16 +243,63 @@ background: #86c79794;
 }
 .centroNoticiasInternacionales{
   min-height: 500px;
-  margin: 15px 45px;
+  margin: 35px 55px;
 }
+.detalleunaNota{
+  margin: 35px 0px;
+  text-align: justify;
+}
+.copeteunaNota{
+  font-weight: normal;
+  font-size: 1.2em;
+}
+.centrounaNota{  margin: 35px 55px;}
+
+.centroRegistro {
+  margin: 55px 185px;
+}
+
+.Registro{
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 2px 2px 7px 0 rgb(0, 0, 0, 0.2);
+  outline: none;
+  color: dimgray;
+  margin-bottom: 15px;
+} 
+button {
+  height: 30px;
+  width:49.6%;
+  border: none;
+  border-radius: 3px;
+  font-size: 1em;
+  padding:0;
+  color: #fff;
+}
+
+#btnBorrar{
+  background-color: #E04641;
+}
+
+#btnResumen{
+  background-color: #70BA33;
+}
+
+#btmContinuar{
+  background-color: #2783B9;
+  width: 100%;
+}
+
 .centroAcercade{
-  margin: 15px 45px;
+  margin: 35px 55px;
 }
 .centroAcercade li{
   list-style: none;
 }
 .centroContacto{
-  margin: 15px 45px;
+  margin: 35px 55px;
 }
 .mapa{
   width: 100% !important;
@@ -494,6 +557,10 @@ puntos de corte para 4 tamaños de dispositivos distintos
 }
 }
 @media(max-width:992px){
+
+  .centroRegistro {
+    margin: 15px 25px;
+  }
 
     .contenedor {
     width: 100%;
