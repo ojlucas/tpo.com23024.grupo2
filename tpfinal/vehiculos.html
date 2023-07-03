@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Vehiculos</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+crossorigin="anonymous">
+<style>
+    .form-outline{
+      border: 1px solid #bdbdbd;
+      border-radius: 5px;
+    }
+    .input-grande {
+  display: block;
+  width: 100%;
+  min-height: 28px;        
+ box-sizing(border-box);  
+}
+</style>
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css"
+  rel="stylesheet"
+/>
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+</head>
+<body class="bg-light">
+<header id="header">
+<!-- place navbar here -->
+</header>
+<main>
+<div id="app" class="container">
+
+<div v-if="error">
+<p>Error , ........</p>
+</div>
+<div v-else>
+<section v-if="cargando">
+<div class="spinner-border"></div>
+<p>Cargando .....</p>
+</section>
+<section  v-else  >
+    
+    <br><br>
+    <h3>Buscar patente autorizada para el ingreso</h3>
+    <div class="col-md-12">
+    <div class="input-group">
+      <div class="form-outline">
+        <input type="text" id="napatente" v-model="unapatente" name="napatente" class="form-control" />
+        <label class="form-label" for="form1"></label>
+      </div>
+      <button type="button" class="btn btn-primary" v-on:click="buscar()">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+        <div v-show="resultado" class="resultado">
+        <p >Resultado <br>
+            <div v-if="autorizado==1" class="bg-success text-white p-3 rounded">
+                VEH&Iacute;CULO AUTORIZADO<br>
+                Patente : [[patente]]<br>
+                Tipo : 
+                <span v-if="tipovehiculo == '0'">Vecino</span>
+                <span v-if="tipovehiculo == '1'">Vehiculo autorizado</span>
+                <br>
+                Vecino : [[nombrevecino]]<br>
+            </div>
+            <div v-if="autorizado==0" class="bg-danger text-white p-3 rounded">  
+                Patente : [[patente]]<br>  
+                VEH&Iacute;CULO NO AUTORIZADO<br>                        
+            </div>
+            <div v-if="errores.length" class="bg-danger text-white p-3 rounded">
+                <b>Error:</b>
+                <ul>
+                  <li v-for="error in errores">[[error]]</li>
+                </ul>
+            </div>
+            
+        </p>    
+        </div>
+         
+    </div>
+    <br>
+  
+    <br>  
+
+<button type="button" class="btn btn-success btn-sm "  data-bs-toggle="modal" data-bs-target="#staticBackdrop"  v-on:click="editar(0)">Agregar veh&iacute;culo autorizado</button>
+<br>
+<div class="table-responsive">
+<table class="table table-striped">
+<thead>
+<tr>
+<th scope="col">Id</th>
+<th scope="col">Patente</th>
+<th scope="col">Tipo vehiculo</th>
+<th scope="col">Vecino</th>
+<th scope="col">Acciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="" v-for="vehiculo in vehiculos">
+<td scope="row">[[vehiculo.id]]</td>
+<td>[[vehiculo.patente]]</td>
+<td v-if="vehiculo.tipovehiculo == '0'">Vecino</td>
+<td v-if="vehiculo.tipovehiculo == '1'">Vehiculo autorizado</td>
+<td>[[vehiculo.nombrevecino]]</td>
+<td>
+<button type="button" class="btn btn-primary btn-sm abrirmodaleditar"  data-bs-toggle="modal" data-bs-target="#staticBackdrop"  v-on:click="editar(vehiculo.id)">Editar</button>
+<button type="button" class="btn btn-danger btn-sm" v-on:click="eliminar(vehiculo.id)" >Eliminar</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel" >[[titulomodal]]</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form >
+           
+            <div class="mb-3">
+                <label for="idvehiculo">Id</label>
+                <input type="text" name="idvehiculo" id="idvehiculo" disabled v-model="idvehiculo" class="input-grande"/>
+            </div>
+            <div class="mb-3">
+                <label for="patente">Patente</label>
+                <input type="text" name="patente" id="patente" v-model="patente"  class="input-grande">
+            </div>
+            <div class="mb-3">
+                <label for="tipovehiculo">Tipo vehiculo</label>
+                <select name="tipovehiculo" id="tipovehiculo" v-model="tipovehiculo"  class="input-grande">
+                    <option value="0">Vecino</option>
+                    <option value="1">Vehiculo autorizado</option>
+                </select>
+
+            </div>
+            <div class="mb-3">
+                <label for="nombrevecino">Nombre vecino</label>
+                <input type="text" name="nombrevecino" id="nombrevecino" v-model="nombrevecino"  class="input-grande">
+            </div>
+            <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-success" v-on:click="editar_grabar()">Guardar</button>
+        </div>
+            </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+</main>
+<footer>
+<!-- place footer here -->
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+crossorigin="anonymous" ></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+crossorigin="anonymous"></script>
+<script src="https://ojlucas.pythonanywhere.com/static/main.js"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
+<script src="vehiculos.js"></script>
+
+</body>
+</html>
